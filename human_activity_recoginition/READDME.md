@@ -11,13 +11,32 @@ Human_Activity_Recognition
 │
 ├── models
 │   └── logistic_model.pkl
-│
+|   └── decision_tree_model.pkl
+│   └── knn_model.pkl
+|   └── naive_bayes_model.pkl
+|   └── gradient_boosting_model.pkl
+|   └── random_forest_model.pkl
+|   └── svm_model.pkl
 ├── results
-│   └── predictions.csv
-│
-├── src
+│   └── result_logistic_model
+|   └── result_decision_tree_model
+│   └── result_knn_model.pkl
+|   └── result_naive_bayes_model
+|   └── result_gradient_boosting_model
+|   └── results_random_forest_model
+|   └── results_svm_model
+|    
+├── code_base
 │   ├── data_preprocessing.py
 │   └── model_training.py
+│   └── logistic_model.py
+|   └── decision_tree_model.py
+│   └── knn_model.py
+|   └── naive_bayes_model.py
+|   └── gradient_boosting_model.py
+|   └── random_forest_model.py
+|   └── svm_model.py
+
 │
 ├── main.py
 │

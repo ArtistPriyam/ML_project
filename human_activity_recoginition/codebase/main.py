@@ -28,10 +28,10 @@ activity_labels = pd.read_csv(activity_labels_path, sep="\s+", header=None, name
 activity_mapping = dict(zip(activity_labels["id"], activity_labels["activity"]))
 
 # Convert predictions to activity names
-y_pred_named = [activity_mapping.get(label, "Unknown") for label in y_pred]
+y_pred_named = [activity_mapping.get(label+1, "Unknown") for label in y_pred]
 
 # Save predictions to results folder
-results_path = "results/predictions.csv"
+results_path = "results/predictions2.csv"
 pd.DataFrame(y_pred_named, columns=["Predicted Activity"]).to_csv(results_path, index=False)
 
 print("Predictions saved to", results_path)

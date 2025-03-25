@@ -24,7 +24,7 @@ subject_train_path = os.path.join(base_path, "train", "subject_train.txt")
 X_train = pd.read_csv(X_train_path, delim_whitespace=True, header=None)
 y_train = pd.read_csv(y_train_path, header=None, names=["Activity"])
 subject_train = pd.read_csv(subject_train_path, header=None, names=["Subject"])
-
+print(y_train["Activity"].dtype)
 # Load test data
 X_test_path = os.path.join(base_path, "test", "X_test.txt")
 y_test_path = os.path.join(base_path, "test", "y_test.txt")
@@ -88,7 +88,7 @@ print(y_train["Activity"].value_counts())
 import pickle
 
 # Save processed data
-with open("processed_data.pkl", "wb") as f:
+with open("data_for_project/processed_data.pkl", "wb") as f:
     pickle.dump((X_train, y_train, X_test, y_test), f)
 
 print("Processed data saved successfully.")
